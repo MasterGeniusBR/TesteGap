@@ -18,6 +18,26 @@
 					<p style="padding-top:7px;margin-bottom:10px;padding-left:10px;width:calc(100% - 12px);margin-top:0px;color:#000;">Olá eu sou Daia sua assistente virtual, o que deseja?</p>
 				</div>
 			</div>
+			<div style="position:relative;float:left;width:100%;top:10px">
+				<div style="border: 1px solid #08ccc2;border-radius: 10px 10px;position:relative;margin-left:10px;max-width:calc(100% - 20px);background-color:dbfff4;word-wrap: break-word;">
+					<p id="erroT" style="padding-top:7px;margin-bottom:10px;padding-left:10px;width:calc(100% - 12px);margin-top:0px;color:#000;">Erros: </p>
+				</div>
+			</div>
+			<div style="position:relative;float:left;width:100%;top:10px">
+				<div style="border: 1px solid #08ccc2;border-radius: 10px 10px;position:relative;margin-left:10px;max-width:calc(100% - 20px);background-color:dbfff4;word-wrap: break-word;">
+					<p id="erroT2" style="padding-top:7px;margin-bottom:10px;padding-left:10px;width:calc(100% - 12px);margin-top:0px;color:#000;">Erros: </p>
+				</div>
+			</div>
+			<div style="position:relative;float:left;width:100%;top:10px">
+				<div style="border: 1px solid #08ccc2;border-radius: 10px 10px;position:relative;margin-left:10px;max-width:calc(100% - 20px);background-color:dbfff4;word-wrap: break-word;">
+					<p id="erroT3" style="padding-top:7px;margin-bottom:10px;padding-left:10px;width:calc(100% - 12px);margin-top:0px;color:#000;">Erros: </p>
+				</div>
+			</div>
+			<div style="position:relative;float:left;width:100%;top:10px">
+				<div style="border: 1px solid #08ccc2;border-radius: 10px 10px;position:relative;margin-left:10px;max-width:calc(100% - 20px);background-color:dbfff4;word-wrap: break-word;">
+					<p id="erroT4" style="padding-top:7px;margin-bottom:10px;padding-left:10px;width:calc(100% - 12px);margin-top:0px;color:#000;">Erros: </p>
+				</div>
+			</div>
 		</div>
 		<div style="margin-top:10px;position:relative;top:0;height:80px;float:left;width:100%">
 			<input id="pergunta" style="padding-left:10px;background-color:#fff;border: 1px solid #22C9D1;border-radius: 10px 10px;font-size:22px;position:relative;width:calc(100% - 110px);margin-left:15px;margin-top:15px;float:left"></input>
@@ -60,8 +80,10 @@
 
 
 	
-		$(function() {
+		function tttt1() {
+			try{
     		fetch('http://18.219.223.202/getFile.php?tipo=var1').then(function(response) {
+			$('#erroT').text(response.text()+"aa");
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -70,11 +92,17 @@
 		  this.dados_1 = resp.split(/\r?\n/);
 		  //myImage.src = objectURL;
 		});
+		}
+		catch(err)
+		{
+		$('#erroT').text("aa");
+		}
 
-	});
-	
+	}
+	tttt1();
 	$(function() {
     		fetch('http://18.219.223.202/getFile.php?tipo=tex1').then(function(response) {
+			$('#erroT2').text(response.text()+"aa2");
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -104,6 +132,7 @@
 
 			$(function() {
     		fetch('http://18.219.223.202/getFile.php?tipo=var2').then(function(response) {
+			$('#erroT3').text(response.text()+"aa3");
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -117,6 +146,7 @@
 	
 		$(function() {
     		fetch('http://18.219.223.202/getFile.php?tipo=tex2').then(function(response) {
+			$('#erroT4').text(response.text()+"aa4");
 		  return response.text();
 		})
 		.then(function(myBlob) {
