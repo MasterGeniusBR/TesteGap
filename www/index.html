@@ -56,8 +56,11 @@
 	var resps_2=[];
 	var pergs_2=[];
 	
+
+
+	
 		$(function() {
-    		fetch('http://192.168.1.5:3000/daiaVbD.dai').then(function(response) {
+    		fetch('http://18.219.223.202/getFile.php?tipo=var1').then(function(response) {
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -70,7 +73,7 @@
 	});
 	
 	$(function() {
-    		fetch('http://192.168.1.5:3000/daiaT.dai').then(function(response) {
+    		fetch('http://18.219.223.202/getFile.php?tipo=tex1').then(function(response) {
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -99,7 +102,7 @@
 	});
 
 			$(function() {
-    		fetch('http://192.168.1.5:3000/daiaVbD2.dai').then(function(response) {
+    		fetch('http://18.219.223.202/getFile.php?tipo=var2').then(function(response) {
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -112,7 +115,7 @@
 	});
 	
 		$(function() {
-    		fetch('http://192.168.1.5:3000/daiaT2.dai').then(function(response) {
+    		fetch('http://18.219.223.202/getFile.php?tipo=tex2').then(function(response) {
 		  return response.text();
 		})
 		.then(function(myBlob) {
