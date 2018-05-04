@@ -64,7 +64,7 @@
 	
 		function tttt1() {
 			try{
-    		fetch('http://18.219.223.202/getFile.php?tipo=var1').then(function(response) {
+    		fetch('http://18.220.73.241/EMS/getFile.php?tipo=var1').then(function(response) {
 			
 		  return response.text();
 		})
@@ -83,7 +83,7 @@
 	}
 	tttt1();
 	$(function() {
-    		fetch('http://18.219.223.202/getFile.php?tipo=tex1').then(function(response) {
+    		fetch('http://18.220.73.241/EMS/getFile.php?tipo=tex1').then(function(response) {
 		  return response.text();
 		})
 		.then(function(myBlob) {
@@ -101,7 +101,7 @@
 				for(troca_linha=0;troca_linha<this.dados_1.length;troca_linha++)
                 {
                     var temp_string = this.dados_1[troca_linha].split(":");
-                    temp[1] = temp[1].replace("☻"+temp_string[0]+"☻",temp_string[1]);
+                    temp[1] = temp[1].replace("☻"+temp_string[0].toLowerCase()+"☻",temp_string[1]);
                 }
 				this.resps_1.push(temp[1]);
 			}
@@ -111,7 +111,7 @@
 
 	});
 
-			$(function() {
+		/*	$(function() {
     		fetch('http://18.219.223.202/getFile.php?tipo=var2').then(function(response) {
 		  return response.text();
 		})
@@ -151,9 +151,12 @@
 		  //myImage.src = objectURL;
 		});
 
-	});
+	});*/
 	function addText()
 	{
+		produtoAtivo="SIDE";
+		this.pergs=this.pergs_1;
+		this.resps=this.resps_1;
 		console.log(this.resps.length);
 		console.log(this.resps);
 		var perguntaTexto = $('#pergunta').val();
@@ -253,6 +256,7 @@
 			$('#textoResp'+intCount).text("É necesário selecionar um produto. Tente Produto + nome do produto");
 			intCount=intCount+1;
 		}
+
 		var objDiv = document.getElementById("vrau");
 		objDiv.scrollTop = objDiv.scrollHeight;
 		//$("#vrau").animate({ scrollTop: $("#vrau").height()});
