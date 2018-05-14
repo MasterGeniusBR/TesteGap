@@ -11,7 +11,7 @@
 		<div style="background: linear-gradient(#079C81, #13A1D6);top:0;height:40px;">
 		<div style="height:10px;">
 		</div>
-			<p style="text-shadow: 1px 2px 4px #000;height:100%;position:relative;margin-top:0px;text-align:center;color:#fff;">Assistente Daia V3</p>
+			<p style="text-shadow: 1px 2px 4px #000;height:100%;position:relative;margin-top:0px;text-align:center;color:#fff;">Assistente Daia V4 Voz</p>
 		</div>
 		<div id="vrau" style="overflow-y:scroll;float:left;position:relative;background-color:#f5f5f5;height:calc(100% - 130px);width:100%">
 			<div style="position:relative;float:left;width:100%;top:10px">
@@ -1418,9 +1418,11 @@ this.resps_20.push(temp[1]);}
     window.plugins.speechRecognition.startListening(function(result){
         // Show results in the console
         alert("1"+result);
+		console.log("1"+result);
 		
     }, function(err){
         alert("2"+err);
+		console.log("2"+err);
     }, {
         language: "en-US",
         showPopup: true
@@ -1431,28 +1433,34 @@ this.resps_20.push(temp[1]);}
 window.plugins.speechRecognition.isRecognitionAvailable(function(available){
     if(!available){
         alert("Sorry, not available");
+		console.log("Indisponibru");
     }
 
     // Check if has permission to use the microphone
     window.plugins.speechRecognition.hasPermission(function (isGranted){
         if(isGranted){
 		alert("OOOO");
+		console.log("000000");
             startRecognition();
         }else{
             // Request the permission
             window.plugins.speechRecognition.requestPermission(function (){
                 // Request accepted, start recognition
 				alert("OOOO");
+				console.log("000000");
                 startRecognition();
             }, function (err){
                 alert("3"+err);
+				console.log("3"+err);
             });
         }
     }, function(err){
         alert("4"+err);
+		console.log("4"+err);
     });
 }, function(err){
     alert("5"+err);
+	console.log("5"+err);
 });
 	 
 	 
