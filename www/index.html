@@ -22,7 +22,7 @@
 		</div>
 		<div style="margin-top:10px;position:relative;top:0;height:80px;float:left;width:100%">
 			<input id="pergunta" style="padding-left:10px;background-color:#fff;border: 1px solid #22C9D1;border-radius: 10px 10px;font-size:22px;position:relative;width:calc(100% - 110px);margin-left:15px;margin-top:15px;float:left"></input>
-			<button onclick='addText();' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#10003;</button>
+			<button onclick='addText("4455AAA");' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#10003;</button>
 		</div>
     </body>
 	
@@ -46,7 +46,7 @@
 	</script>
 	
 <script>
-/*
+
 	var intCount=0;
 	var resp = "";
 	var textos;
@@ -114,7 +114,7 @@ var resps_20 =[];
 var pergs_20 =[];
 	
 	$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd1.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD1.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -126,7 +126,7 @@ this.dados_1 = resp.split(/\r?\n/);
 });
 $(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -151,7 +151,7 @@ this.resps_1.push(temp[1]);}
 });
 });
 $(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd2.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD2.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -162,7 +162,7 @@ this.dados_2 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -186,7 +186,7 @@ this.resps_2.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd3.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD3.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -197,7 +197,7 @@ this.dados_3 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -221,7 +221,7 @@ this.resps_3.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd4.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD4.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -232,7 +232,7 @@ this.dados_4 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -256,7 +256,7 @@ this.resps_4.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd5.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD5.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -267,7 +267,7 @@ this.dados_5 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -291,7 +291,7 @@ this.resps_5.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd6.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD6.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -302,7 +302,7 @@ this.dados_6 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -326,7 +326,7 @@ this.resps_6.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd7.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD7.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -337,7 +337,7 @@ this.dados_7 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -361,7 +361,7 @@ this.resps_7.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd8.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD8.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -372,7 +372,7 @@ this.dados_8 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -396,7 +396,7 @@ this.resps_8.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd9.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD9.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -407,7 +407,7 @@ this.dados_9 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -431,7 +431,7 @@ this.resps_9.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd10.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD10.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -442,7 +442,7 @@ this.dados_10 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -466,7 +466,7 @@ this.resps_10.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd11.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD11.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -477,7 +477,7 @@ this.dados_11 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -501,7 +501,7 @@ this.resps_11.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd12.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD12.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -512,7 +512,7 @@ this.dados_12 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -536,7 +536,7 @@ this.resps_12.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd13.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD13.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -547,7 +547,7 @@ this.dados_13 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -571,7 +571,7 @@ this.resps_13.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd14.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD14.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -582,7 +582,7 @@ this.dados_14 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -606,7 +606,7 @@ this.resps_14.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd15.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD15.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -617,7 +617,7 @@ this.dados_15 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -641,7 +641,7 @@ this.resps_15.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd16.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD16.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -652,7 +652,7 @@ this.dados_16 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -676,7 +676,7 @@ this.resps_16.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd17.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD17.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -687,7 +687,7 @@ this.dados_17 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -711,7 +711,7 @@ this.resps_17.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd18.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD18.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -722,7 +722,7 @@ this.dados_18 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -746,7 +746,7 @@ this.resps_18.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd19.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD19.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -757,7 +757,7 @@ this.dados_19 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -781,7 +781,7 @@ this.resps_19.push(temp[1]);}
 //myImage.src = objectURL;
 });
 });$(function() {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaVbd20.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD20.txt').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -792,7 +792,7 @@ this.dados_20 = resp.split(/\r?\n/);
 });
 });$(function()
 {
-fetch('http://18.220.73.241/Cellera/getFile.php?tipo=daiaT.txt').then(function(response) {
+fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) {
 return response.text();
 })
 .then(function(myBlob) {
@@ -817,11 +817,20 @@ this.resps_20.push(temp[1]);}
 });
 });
 
-	function addText()
+	function addText(vindo)
 	{
+		perguntaTexto="aa";
+		if(vindo=="4455AAA")
+		{
+			perguntaTexto = $('#pergunta').val();
+		}
+		else
+		{
+			perguntaTexto=vindo;
+		}
 		console.log(this.resps.length);
 		console.log(this.resps);
-		var perguntaTexto = $('#pergunta').val();
+		
 		var achou=0;
 		var compr=this.resps.length;
 		if(produtoAtivo!="")
@@ -1407,7 +1416,7 @@ this.resps_20.push(temp[1]);}
 		var objDiv = document.getElementById("vrau");
 		objDiv.scrollTop = objDiv.scrollHeight;
 		//$("#vrau").animate({ scrollTop: $("#vrau").height()});
-	}*/
+	}
 	function ttt()
 	{
 	alert("oi");
@@ -1417,14 +1426,20 @@ this.resps_20.push(temp[1]);}
 	 function startRecognition(){
     window.plugins.speechRecognition.startListening(function(result){
         // Show results in the console
-        alert("1"+result);
-		console.log("1"+result);
+        //alert("1"+result);
+		/*for(var countForTexto)
+		{
+			
+		}*/
+		alert(result[0]);
+		addText(result[0]);
+		//console.log("1"+result);
 		
     }, function(err){
-        alert("2"+err);
-		console.log("2"+err);
+        //alert("2"+err);
+		//console.log("2"+err);
     }, {
-        language: "en-US",
+        language: "pt-BR",
         showPopup: true
     });
 }
@@ -1432,35 +1447,35 @@ this.resps_20.push(temp[1]);}
 // Verify if recognition is available
 window.plugins.speechRecognition.isRecognitionAvailable(function(available){
     if(!available){
-        alert("Sorry, not available");
-		console.log("Indisponibru");
+        alert("Sistema de Voz indisponivel nesse celular");
+		//console.log("Indisponibru");
     }
 
     // Check if has permission to use the microphone
     window.plugins.speechRecognition.hasPermission(function (isGranted){
         if(isGranted){
-		alert("OOOO");
-		console.log("000000");
+		//alert("OOOO");
+		//console.log("000000");
             startRecognition();
         }else{
             // Request the permission
             window.plugins.speechRecognition.requestPermission(function (){
                 // Request accepted, start recognition
-				alert("OOOO");
-				console.log("000000");
-                startRecognition();
+				//alert("OOOO");
+				//console.log("000000");
+                //startRecognition();
             }, function (err){
-                alert("3"+err);
-				console.log("3"+err);
+                //alert("3"+err);
+				//console.log("3"+err);
             });
         }
     }, function(err){
-        alert("4"+err);
-		console.log("4"+err);
+        //alert("4"+err);
+		//console.log("4"+err);
     });
 }, function(err){
-    alert("5"+err);
-	console.log("5"+err);
+    //alert("5"+err);
+	//console.log("5"+err);
 });
 	 
 	 
