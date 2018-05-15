@@ -30,6 +30,7 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="cordova-plugin-speechrecognition" spec="~1.2.0" source="npm" />
+	<plugin spec="https://github.com/macdonst/SpeechSynthesisPlugin" source="git" />
     <access origin="*" />
 	<allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

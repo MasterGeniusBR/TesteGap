@@ -1148,6 +1148,7 @@ this.resps_20.push(temp[1]);}
 				$('#textoPerg'+intCount).text(vindo);
 				$('#textoResp').attr("id","textoResp"+intCount);
 				$('#textoResp'+intCount).text("Comando não encontrado");
+				playVibrate("Comando não encontrado");
 				intCount=intCount+1;
 			}
 		}
@@ -1437,10 +1438,10 @@ this.resps_20.push(temp[1]);}
 		window.plugins.speechRecognition.startListening(function(result){
 			// Show results in the console
 			//alert("1"+result);
-			/*for(var countForTexto)
-			{
+			//for(var countForTexto)
+			//
 				
-			}*/
+			//}
 			//alert(result[0]);
 			addText(result[0]);
 			ouvindo=false;
@@ -1496,6 +1497,12 @@ this.resps_20.push(temp[1]);}
 	}, false);
 		}
 	}
-
+	 function playVibrate(textoVozFala) {
+    var u = new SpeechSynthesisUtterance();
+    u.text = textoVozFala;
+    u.lang = 'pt-BR';
+    speechSynthesis.speak(u);      
+  }
+playVibrate();
 	</script>
 </html>
