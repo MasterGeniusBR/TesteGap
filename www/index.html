@@ -1135,6 +1135,8 @@ this.resps_20.push(temp[1]);}
 							$('#textoPerg'+intCount).text(this.pergs[i]+" ");
 							$('#textoResp').attr("id","textoResp"+intCount);
 							$('#textoResp'+intCount).text(this.resps[i]);
+							$('#textoResp'+intCount).text(this.resps[i]+" ");
+							playVibrate(this.resps[i]);
 							intCount=intCount+1;
 							achou=1;
 					}
@@ -1503,6 +1505,6 @@ this.resps_20.push(temp[1]);}
     u.lang = 'pt-BR';
     speechSynthesis.speak(u);      
   }
-playVibrate();
+
 	</script>
 </html>
