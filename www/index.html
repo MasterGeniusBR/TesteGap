@@ -22,7 +22,7 @@
 		</div>
 		<div style="margin-top:10px;position:relative;top:0;height:80px;float:left;width:100%">
 			<input onkeypress="return enterText(event)" id="pergunta" style="padding-left:10px;background-color:#fff;border: 1px solid #22C9D1;border-radius: 10px 10px;font-size:22px;position:relative;width:calc(100% - 110px);margin-left:15px;margin-top:15px;float:left"></input>
-			<button onclick='addText("4455AAA");' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#10003;</button>
+			<button onclick='voiceToText();' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#10003;</button>
 		</div>
     </body>
 	
@@ -1425,7 +1425,7 @@ this.resps_20.push(temp[1]);}
 		objDiv.scrollTop = objDiv.scrollHeight;
 		//$("#vrau").animate({ scrollTop: $("#vrau").height()});
 	}
-	function ttt()
+	function voiceToText()
 	{
 		if(ouvindo==false)
 		{
