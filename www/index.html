@@ -11,7 +11,7 @@
 		<div style="background: linear-gradient(#079C81, #13A1D6);top:0;height:40px;">
 		<div style="height:10px;">
 		</div>
-			<p style="text-shadow: 1px 2px 4px #000;height:100%;position:relative;margin-top:0px;text-align:center;color:#fff;">Assistente Daia V0.5</p>
+			<p style="text-shadow: 1px 2px 4px #000;height:100%;position:relative;margin-top:0px;text-align:center;color:#fff;">Assistente Daia V1</p>
 		</div>
 		<div id="vrau" style="overflow-y:scroll;float:left;position:relative;background-color:#f5f5f5;height:calc(100% - 130px);width:100%">
 			<div style="position:relative;float:left;width:100%;top:10px">
@@ -21,7 +21,8 @@
 			</div>
 		</div>
 		<div style="margin-top:10px;position:relative;top:0;height:80px;float:left;width:100%">
-			<input onkeypress="return enterText(event)" id="pergunta" style="padding-left:10px;background-color:#fff;border: 1px solid #22C9D1;border-radius: 10px 10px;font-size:22px;position:relative;width:calc(100% - 110px);margin-left:15px;margin-top:15px;float:left"></input>
+			<input onkeypress="return enterText(event)" id="pergunta" style="padding-left:10px;background-color:#fff;border: 1px solid #22C9D1;border-radius: 10px 10px;font-size:22px;position:relative;width:calc(100% - 170px);margin-left:15px;margin-top:15px;float:left"></input>
+			<button onclick='apagaText();' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#9003;</button>
 			<button onclick='voiceToText();' style="font-size:24px;border: 1px solid #22C9D1;border-radius: 10px 10px;position:relative;width:50px;float:left;margin-top:15px;height:35px;margin-left:15px">&#10003;</button>
 		</div>
     </body>
@@ -46,72 +47,145 @@
 	</script>
 	
 <script>
-	var ouvindo=false;
-	var intCount=0;
-	var resp = "";
-	var textos;
-	var produtoAtivo="";
-	var resps=[];
-	var pergs=[];
-	var dados_1=[];
-	var resps_1=[];
-	var pergs_1=[];
-	var resps_2=[];
-	var pergs_2=[];
-	var dados_3=[];
+function apagaText()
+{  
+	document.getElementById('pergunta').value = "";
+}
+var ouvindo=false;
+var intCount=0;
+var resp = "";
+var textos;
+var produtoAtivo="";
+var resps=[];
+var pergs=[];
+var dados_1=[];
+var resps_1=[];
+var pergs_1=[];
+	
+var dados_2=[];
+var resps_2=[];
+var pergs_2=[];
+	
+var dados_3=[];
 var resps_3 =[];
 var pergs_3 =[];
+
 var dados_4=[];
 var resps_4 =[];
 var pergs_4 =[];
+
 var dados_5=[];
 var resps_5 =[];
 var pergs_5 =[];
+
 var dados_6=[];
 var resps_6 =[];
 var pergs_6 =[];
+
 var dados_7=[];
 var resps_7 =[];
 var pergs_7 =[];
+
 var dados_8=[];
 var resps_8 =[];
 var pergs_8 =[];
+
 var dados_9=[];
 var resps_9 =[];
 var pergs_9 =[];
+
 var dados_10=[];
 var resps_10 =[];
 var pergs_10 =[];
+
 var dados_11=[];
 var resps_11 =[];
 var pergs_11 =[];
+
 var dados_12=[];
 var resps_12 =[];
 var pergs_12 =[];
+
 var dados_13=[];
 var resps_13 =[];
 var pergs_13 =[];
+
 var dados_14=[];
 var resps_14 =[];
 var pergs_14 =[];
+
 var dados_15=[];
 var resps_15 =[];
 var pergs_15 =[];
+
 var dados_16=[];
 var resps_16 =[];
 var pergs_16 =[];
+
 var dados_17=[];
 var resps_17 =[];
 var pergs_17 =[];
+
 var dados_18=[];
 var resps_18 =[];
 var pergs_18 =[];
+
 var dados_19=[];
 var resps_19 =[];
 var pergs_19 =[];
+
 var dados_20=[];
 var resps_20 =[];
 var pergs_20 =[];
+
+var dados_21=[];
+var resps_21 =[];
+var pergs_21 =[];
+
+var dados_22=[];
+var resps_22 =[];
+var pergs_22 =[];
+
+var dados_23=[];
+var resps_23 =[];
+var pergs_23 =[];
+
+var dados_24=[];
+var resps_24 =[];
+var pergs_24 =[];
+
+var dados_25=[];
+var resps_25 =[];
+var pergs_25 =[];
+
+var dados_26=[];
+var resps_26 =[];
+var pergs_26 =[];
+
+var dados_27=[];
+var resps_27 =[];
+var pergs_27 =[];
+
+var dados_28=[];
+var resps_28 =[];
+var pergs_28 =[];
+
+var dados_29=[];
+var resps_29 =[];
+var pergs_29 =[];
+
+var dados_30=[];
+var resps_30 =[];
+var pergs_30 =[];
+
+var dados_31=[];
+var resps_31 =[];
+var pergs_31 =[];
+
+var dados_32=[];
+var resps_32 =[];
+var pergs_32 =[];
+
 
 function enterText(e) {
     if (e.keyCode == 13) {
@@ -825,6 +899,445 @@ this.resps_20.push(temp[1]);}
 });
 });
 
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD21.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_21 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_21.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_21.length; troca_linha++)
+				{
+					var temp_string = this.dados_21[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_21.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD22.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_22 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_22.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_22.length; troca_linha++)
+				{
+					var temp_string = this.dados_22[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_22.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD23.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_23 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_23.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_23.length; troca_linha++)
+				{
+					var temp_string = this.dados_23[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_23.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD24.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_24 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_24.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_24.length; troca_linha++)
+				{
+					var temp_string = this.dados_24[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_24.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD25.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_25 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_25.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_25.length; troca_linha++)
+				{
+					var temp_string = this.dados_25[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_25.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD26.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_26 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_26.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_26.length; troca_linha++)
+				{
+					var temp_string = this.dados_26[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_26.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD27.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_27 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_27.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_27.length; troca_linha++)
+				{
+					var temp_string = this.dados_27[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_27.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD28.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_28 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_28.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_28.length; troca_linha++)
+				{
+					var temp_string = this.dados_28[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_28.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD29.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_29 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_29.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_29.length; troca_linha++)
+				{
+					var temp_string = this.dados_29[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_29.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
+
+$(function() 
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaVbD30.txt').then(function(response)
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.dados_30 = resp.split(/\r?\n/);
+		//myImage.src = objectURL;
+	});
+});
+$(function()
+{
+	fetch('http://13.59.121.68/Cellera/getFile.php?tipo=daiaT.dai').then(function(response) 
+	{
+		return response.text();
+	}).then(function(myBlob) 
+	{
+		this.resp = myBlob;
+		console.log(this.resp);
+		this.textos = resp.split(/\r?\n/);
+		var fLen = this.textos.length;
+		console.log(fLen);
+		for (i = 0; i < fLen; i++)
+		{
+			if (!(textos[i].startsWith("--")))
+			{
+				var temp = this.textos[i].split("|");
+				this.pergs_30.push(temp[0]);
+				for (troca_linha = 0; troca_linha < this.dados_30.length; troca_linha++)
+				{
+					var temp_string = this.dados_30[troca_linha].split(":");
+					temp[1] = temp[1].replace("☻" + temp_string[0] + "☻", temp_string[1]);
+				}
+				this.resps_30.push(temp[1]);
+			}
+		}
+		//myImage.src = objectURL;
+	});
+});
+
 	function addText(vindo)
 	{
 		perguntaTexto="aa";
@@ -1123,6 +1636,146 @@ this.resps_20.push(temp[1]);}
 				this.resps=this.resps_20;
 				achou=1;
 			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina Ameixa 14".toLowerCase())
+			{
+				produtoAtivo="Livina Ameixa 14";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina Ameixa 14 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_21;
+				this.resps=this.resps_21;
+				achou=1;
+			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina Ameixa 30".toLowerCase())
+			{
+				produtoAtivo="Livina Ameixa 30";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina Ameixa 30 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_22;
+				this.resps=this.resps_22;
+				achou=1;
+			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina Tangerina 14".toLowerCase())
+			{
+				produtoAtivo="Livina Tangerina 14";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina Tangerina 14 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_23;
+				this.resps=this.resps_23;
+				achou=1;
+			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina Tangerina 30".toLowerCase())
+			{
+				produtoAtivo="Livina Tangerina 30";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina Tangerina 30 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_24;
+				this.resps=this.resps_24;
+				achou=1;
+			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina 44".toLowerCase())
+			{
+				produtoAtivo="Livina 44";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina 44 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_25;
+				this.resps=this.resps_25;
+				achou=1;
+			}
+			else if(perguntaTexto.toLowerCase()=="Produto Livina 28".toLowerCase())
+			{
+				produtoAtivo="Livina 28";
+				var template = $('#hidden-template').html();
+				$('#vrau').append(template);
+				$('#texto').attr("id","textoPerg"+intCount);
+				$('#textoPerg'+intCount).text(perguntaTexto);
+				$('#textoResp').attr("id","textoResp"+intCount);
+				$('#textoResp'+intCount).text("Você definiu Livina 28 como produto ativo");
+				intCount=intCount+1;
+				this.pergs=this.pergs_26;
+				this.resps=this.resps_26;
+				achou=1;
+			}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner Gel".toLowerCase())
+		{
+			produtoAtivo="Spotner Gel";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner Gel como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_27;
+			this.resps=this.resps_27;
+			achou=1;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner K Gel".toLowerCase())
+		{
+			produtoAtivo="Spotner K Gel";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner K Gel como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_28;
+			this.resps=this.resps_28;
+			achou=1;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner K Hands".toLowerCase())
+		{
+			produtoAtivo="Spotner K Hands";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner K Hands como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_29;
+			this.resps=this.resps_29;
+			achou=1;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner Kit".toLowerCase())
+		{
+			produtoAtivo="Spotner Kit";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner Kit como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_30;
+			this.resps=this.resps_30;
+			achou=1;
+		}
 			if(achou!=1)
 			{
 				for (i = 0; i < compr; i++) 
@@ -1147,7 +1800,7 @@ this.resps_20.push(temp[1]);}
 				var template = $('#hidden-template').html();
 				$('#vrau').append(template);
 				$('#texto').attr("id","textoPerg"+intCount);
-				$('#textoPerg'+intCount).text(vindo);
+				$('#textoPerg'+intCount).text(perguntaTexto);
 				$('#textoResp').attr("id","textoResp"+intCount);
 				$('#textoResp'+intCount).text("Comando não encontrado");
 				playVibrate("Comando não encontrado");
@@ -1413,6 +2066,136 @@ this.resps_20.push(temp[1]);}
 			intCount=intCount+1;
 			this.pergs=this.pergs_20;
 			this.resps=this.resps_20;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina Ameixa 14".toLowerCase())
+		{
+			produtoAtivo="Livina Ameixa 14";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina Ameixa 14 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_21;
+			this.resps=this.resps_21;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina Ameixa 30".toLowerCase())
+		{
+			produtoAtivo="Livina Ameixa 30";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina Ameixa 30 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_22;
+			this.resps=this.resps_22;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina Tangerina 14".toLowerCase())
+		{
+			produtoAtivo="Livina Tangerina 14";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina Tangerina 14 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_23;
+			this.resps=this.resps_23;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina Tangerina 30".toLowerCase())
+		{
+			produtoAtivo="Livina Tangerina 30";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina Tangerina 30 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_24;
+			this.resps=this.resps_24;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina 44".toLowerCase())
+		{
+			produtoAtivo="Livina 44";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina 44 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_25;
+			this.resps=this.resps_25;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Livina 28".toLowerCase())
+		{
+			produtoAtivo="Livina 28";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Livina 28 como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_26;
+			this.resps=this.resps_26;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner Gel".toLowerCase())
+		{
+			produtoAtivo="Spotner Gel";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner Gel como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_27;
+			this.resps=this.resps_27;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner K Gel".toLowerCase())
+		{
+			produtoAtivo="Spotner K Gel";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner K Gel como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_28;
+			this.resps=this.resps_28;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner K Hands".toLowerCase())
+		{
+			produtoAtivo="Spotner K Hands";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner K Hands como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_29;
+			this.resps=this.resps_29;
+		}
+		else if(perguntaTexto.toLowerCase()=="Produto Spotner Kit".toLowerCase())
+		{
+			produtoAtivo="Spotner Kit";
+			var template = $('#hidden-template').html();
+			$('#vrau').append(template);
+			$('#texto').attr("id","textoPerg"+intCount);
+			$('#textoPerg'+intCount).text(perguntaTexto);
+			$('#textoResp').attr("id","textoResp"+intCount);
+			$('#textoResp'+intCount).text("Você definiu Spotner Kit como produto ativo");
+			intCount=intCount+1;
+			this.pergs=this.pergs_30;
+			this.resps=this.resps_30;
 		}
 		else
 		{
