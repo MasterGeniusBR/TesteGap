@@ -51,15 +51,8 @@ function apagaText()
 {  
 	document.getElementById('pergunta').value = "";
 }
-	function playIntro(textoVozFala)
-	{
-		var u = new SpeechSynthesisUtterance();
-		u.text = textoVozFala;
-		u.lang = 'pt-BR';
-		u.volume=1;
-		speechSynthesis.speak(u);      
-	}
-	playIntro("Olá eu sou Daia sua assistente virtual, o que deseja?");
+
+	
 /*var ouvindo=false;
 var intCount=0;
 var resp = "";
@@ -1347,6 +1340,8 @@ $(function()
 	});
 });
 */
+
+playVibrate("Olá eu sou Daia sua assistente virtual, o que deseja?");
 	function addText(vindo)
 	{
 		perguntaTexto="aa";
@@ -2298,6 +2293,7 @@ $(function()
 	u.volume=1;
     speechSynthesis.speak(u);      
   }
+  
 
 	</script>
 </html>
